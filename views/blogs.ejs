@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+</head>
+<body>
+    <h1>All Blogs</h1>
+    <ul>
+        <% blogs.forEach(blog => { %>
+            <li>
+                <h2><%= blog.title %></h2>
+                <p><%= blog.content %></p>
+                <small><%= blog.createdAt.toDateString() %></small>
+
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/create">Create New Blog</a>
+</body>
+</html>
